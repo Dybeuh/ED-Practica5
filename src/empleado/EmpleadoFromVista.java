@@ -125,6 +125,7 @@ public class EmpleadoFromVista implements ActionListener{
 		idField.setVisible(true);
 		idField.setEditable(true);
 		nombreField.setVisible(true);
+		aceptarButton.setText("Consultar");
 		aceptarButton.setVisible(true);
 		this.estado = "consultar";
 		this.miFrame.setVisible(true);
