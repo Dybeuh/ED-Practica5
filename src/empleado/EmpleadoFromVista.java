@@ -107,11 +107,11 @@ public class EmpleadoFromVista implements ActionListener{
 	public void cargarBorrar(String[] empleados) {
 		choiceSelector.setVisible(true);
 		choiceSelector.setModel(new DefaultComboBoxModel<String>(empleados));
-		idLabel.setVisible(true);
-		nombreLabel.setVisible(true);
-		idField.setVisible(true);
-		idField.setEditable(true);
-		nombreField.setVisible(true);
+		idLabel.setVisible(false);
+		nombreLabel.setVisible(false);
+		idField.setVisible(false);
+		idField.setEditable(false);
+		nombreField.setVisible(false);
 		aceptarButton.setText("Borrar");
 		aceptarButton.setVisible(true);
 		this.estado = "borrar";
