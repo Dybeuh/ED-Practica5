@@ -102,6 +102,7 @@ public class EmpleadoFromVista implements ActionListener{
 		aceptarButton.setVisible(true);
 		this.estado = "nuevo";
 		this.miFrame.setVisible(true);
+		this.miFrame.setTitle("Alta Empleado");
 	}
 	
 	public void cargarBorrar(String[] empleados) {
@@ -116,6 +117,7 @@ public class EmpleadoFromVista implements ActionListener{
 		aceptarButton.setVisible(true);
 		this.estado = "borrar";
 		this.miFrame.setVisible(true);
+		this.miFrame.setTitle("Borrar Empleado");
 	}
 	
 	public void cargarConsultar() {
@@ -129,6 +131,7 @@ public class EmpleadoFromVista implements ActionListener{
 		aceptarButton.setVisible(true);
 		this.estado = "consultar";
 		this.miFrame.setVisible(true);
+		this.miFrame.setTitle("Consultar Empleado");
 	}
 	
 	public void cargarEditar(String[] empleados) {
@@ -143,6 +146,7 @@ public class EmpleadoFromVista implements ActionListener{
 		aceptarButton.setVisible(true);
 		this.estado = "editar";
 		this.miFrame.setVisible(true);
+		this.miFrame.setTitle("Editar Empleado");
 	}
 
 	@Override
