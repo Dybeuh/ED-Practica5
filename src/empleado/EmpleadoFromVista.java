@@ -18,6 +18,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -156,9 +157,15 @@ public class EmpleadoFromVista implements ActionListener{
 				Boolean res = this.empContrl.crearEmpleado(this.nombreField.getText());
 
 			} else if (this.estado.equals("borrar")) {
-				Boolean res = this.empContrl.borrarEmpleado(this.choiceSelector.getSelectedItem().toString());
-				String[] emps = this.empContrl.cargarListaEmpleados();
-				this.cargarBorrar(emps);
+				
+				int resp= JOptionPane.showConfirmDialog(null,
+			             "¿Seguro que quiere borrar?", "Borrar empleado", JOptionPane.YES_NO_OPTION);
+				if (JOptionPane.OK_OPTION == resp){
+					Boolean res = this.empContrl.borrarEmpleado(this.choiceSelector.getSelectedItem().toString());
+					String[] emps = this.empContrl.cargarListaEmpleados();
+					this.cargarBorrar(emps);
+					 }
+				
 			}else if (this.estado.equals("consultar")) {
 				if (! this.nombreField.getText().isEmpty()) {
 					Empleado emp = this.empContrl.consultarEmpleadoPorNombre(this.nombreField.getText());
