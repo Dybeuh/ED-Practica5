@@ -10,11 +10,11 @@ import java.util.ArrayList;
 
 public class EmpleadoControlador {
 
-	// Conexión con BBDD
+	// ConexiÃ³n con BBDD
 		String driver = "com.mysql.jdbc.Driver";
 		String url = "jdbc:mysql://127.0.0.1:3306/empresa?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-		String login = "root";
-		String password = "Campesino89!";
+		String login = "";
+		String password = "";
 
 		Connection connection = null;
 		Statement statement = null;
@@ -29,7 +29,7 @@ public class EmpleadoControlador {
 			} catch (ClassNotFoundException e) {
 				System.out.println("Se ha producido un error al cargar el Driver");
 			}
-			// Establecer la conexión con la base de datos
+			// Establecer la conexiÃ³n con la base de datos
 			try {
 				connection = DriverManager.getConnection(url, login, password);
 			} catch (SQLException e) {
